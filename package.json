@@ -5,6 +5,7 @@
   "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "front-matter": "^3.0.1",
     "gatsby": "2.0.40",
     "gatsby-image": "2.0.19",
     "gatsby-plugin-catch-links": "2.0.6",
@@ -44,6 +45,8 @@
     "url-join": "^4.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
     "cli-glob": "^0.1.0",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -76,7 +79,8 @@
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark content/posts/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier '**/*.{js,jsx}' --write"
+    "format:js": "prettier '**/*.{js,jsx}' --write",
+    "jk2g": "babel jekyll_to_gatsby.js | node"
   },
   "remarkConfig": {
     "plugins": [
